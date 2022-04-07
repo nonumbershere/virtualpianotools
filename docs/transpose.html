@@ -2,7 +2,7 @@
     <script>
         // Transpose
         var r = '1!2@34$5%6^78*9(0qQwWeErtTyYuiIoOpPasSdDfgGhHjJklLzZxcCvVbBnm'.split('');
-        function Increase(sheets, transition=1) {
+         function Increase(sheets, transition=1) {
             if (!transition) return;
             transition = parseInt(transition);
             var results = '';
@@ -24,7 +24,7 @@
                     results += sheets[jj];
                 }
             }
-            return results;
+                return results.replaceAll(undefined, '??'.fontcolor('#dae9b6'));
         }
     </script>
     

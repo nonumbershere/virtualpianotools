@@ -1,0 +1,25 @@
+#title {
+  display : none;
+}
+
+body>p>span>span {
+  font-family : monospace;
+}
+
+body {
+  font-family : Arial, Helvetica, sans-serifserif !important;
+}
+
+body>ul>li>a {
+  font-family : Arial, Helvetica, sans-serif;
+}
+
+body>p>span>span>strong {
+  line-height : 10px;
+  word-spacing : 1px;
+  margin : 1px;
+  padding : 1px;
+  vertical-align : middle;
+  opacity : 0.7;
+  z-index : 0;
+}

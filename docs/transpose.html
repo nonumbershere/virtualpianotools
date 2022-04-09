@@ -47,7 +47,7 @@
     filter: opacity(0.6);
 }</style>
     
-    <body style="font-family:Arial,Helvetica,sans-serif"><center><h1>Transpose</h1></center>
+    <body style="margin:1px;font-family:Arial,Helvetica,sans-serif"><center><h1>Transpose</h1></center>
     
     <textarea spellcheck="false" style="width: 352px;outline: none;background: #f7f7f7;caret-color: #c8c8c8;font-family: Arial,Helvetica,sans-serif;border: solid 0.01em #cfcfcf;color: black;resize: none;height: 202px;" id="input" placeholder="Insert Sheets Here..."></textarea><br><br><button style="border: solid 0.01em #cdcdcd;padding: 6px;cursor: pointer;color: #5c5c5c;" onclick="document.getElementById('output').innerHTML = Convert(Increase(document.getElementById('input').value, document.getElementById('sep').value)); toCanvas(Convert(Increase(document.getElementById('input').value, document.getElementById('sep').value)))">Transpose</button> <input id="sep" type="number" style="outline: none;background: #f2f2f2;border: solid 0.01rem #c4c4c4;height: 28px;width: 61px;padding: 5PX;" value="1" max="20" min="-20"><br>
 <br><h4 style="margin: 0;color: #2f2e2e;">Output</h4><br><div id="output" style="margin: 0px;border: solid 2px #161616;background: #1c1c1c;padding: 0px;height: 310px;width: 470px;"></div>
@@ -75,6 +75,7 @@ var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
 var url = DOMURL.createObjectURL(svg);
 
 img.onload = function () {
+    ctx.clear();
   ctx.drawImage(img, 0, 0);
   DOMURL.revokeObjectURL(url);
 }
